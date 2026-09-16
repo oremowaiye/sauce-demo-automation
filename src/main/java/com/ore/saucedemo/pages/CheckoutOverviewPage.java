@@ -32,6 +32,7 @@ public class CheckoutOverviewPage extends BasePage {
     }
 
     public List<Product> items() {
+        waitForVisible(SUMMARY_INFO);
         return driver.findElements(CART_ITEM).stream()
                 .map(item -> new Product(
                         item.findElement(ITEM_NAME).getText().trim(),

@@ -51,6 +51,7 @@ public class ScenarioContext {
         return checkoutInformationPage;
     }
 
+
     public void setCheckoutInformationPage(CheckoutInformationPage page) {
         this.checkoutInformationPage = page;
     }

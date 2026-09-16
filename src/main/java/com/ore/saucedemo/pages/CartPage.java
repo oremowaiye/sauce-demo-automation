@@ -46,6 +46,7 @@ public class CartPage extends BasePage {
     }
 
     public int itemCount() {
+        waitForVisible(CART_LIST);
         return driver.findElements(CART_ITEM).size();
     }
 
@@ -54,6 +55,7 @@ public class CartPage extends BasePage {
     }
 
     public List<Product> items() {
+        waitForVisible(CART_LIST);
         return driver.findElements(CART_ITEM).stream()
                 .map(item -> new Product(
                         item.findElement(ITEM_NAME).getText().trim(),
@@ -98,6 +100,7 @@ public class CartPage extends BasePage {
     }
 
     private WebElement itemFor(String productName) {
+        waitForVisible(CART_LIST);
         return driver.findElements(CART_ITEM).stream()
                 .filter(item -> item.findElement(ITEM_NAME).getText().trim().equalsIgnoreCase(productName.trim()))
                 .findFirst()
