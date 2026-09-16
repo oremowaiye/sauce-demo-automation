@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- The Gherkin layer. Same page objects, expressed as business-readable scenarios. -->
+<suite name="SauceDemo BDD" verbose="1">
+
+    <listeners>
+        <listener class-name="com.ore.saucedemo.listeners.TestListener"/>
+    </listeners>
+
+    <test name="Cucumber scenarios">
+        <classes>
+            <class name="com.ore.saucedemo.bdd.runners.CucumberTestRunner"/>
+        </classes>
+    </test>
+</suite>

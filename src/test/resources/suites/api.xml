@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- RestAssured checks. No browser is started for these, so they finish in seconds. -->
+<suite name="SauceDemo API" parallel="methods" thread-count="4" verbose="1">
+
+    <listeners>
+        <listener class-name="com.ore.saucedemo.listeners.TestListener"/>
+    </listeners>
+
+    <test name="API">
+        <classes>
+            <class name="com.ore.saucedemo.api.JsonPlaceholderApiTests"/>
+        </classes>
+    </test>
+</suite>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!-- Full UI regression. Classes run in parallel: each test method owns its own
+     WebDriver (see DriverFactory's ThreadLocal), so there is no shared state. -->
+<suite name="SauceDemo regression" parallel="classes" thread-count="3" verbose="1">
+
+    <listeners>
+        <listener class-name="com.ore.saucedemo.listeners.TestListener"/>
+        <listener class-name="com.ore.saucedemo.listeners.RetryTransformer"/>
+    </listeners>
+
+    <test name="UI regression">
+        <classes>
+            <class name="com.ore.saucedemo.tests.LoginTests"/>
+            <class name="com.ore.saucedemo.tests.InventoryTests"/>
+            <class name="com.ore.saucedemo.tests.CartTests"/>
+            <class name="com.ore.saucedemo.tests.CheckoutTests"/>
+        </classes>
+    </test>
+</suite>
