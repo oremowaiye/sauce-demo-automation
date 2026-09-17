@@ -57,6 +57,12 @@ by the suite XML files rather than by `-Dtest`.
 
 ### Reports
 
+The latest Allure report from CI is published at
+[oremowaiye.github.io/sauce-demo-automation](https://oremowaiye.github.io/sauce-demo-automation/),
+with pass/fail per test, timings, severities and a screenshot of anything that failed.
+
+To generate it locally:
+
 ```bash
 mvn allure:serve        # opens the Allure report in a browser
 ```
