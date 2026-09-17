@@ -37,7 +37,7 @@ public final class ScreenshotUtils {
                     + "-" + LocalDateTime.now().format(STAMP) + ".png";
             Files.write(SCREENSHOT_DIR.resolve(fileName), png);
         } catch (IOException e) {
-            // A screenshot that cannot be saved must never mask the real test failure.
+            // A screenshot we cannot save must not hide the real failure.
             System.err.println("Could not write screenshot: " + e.getMessage());
         }
     }

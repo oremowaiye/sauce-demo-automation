@@ -5,8 +5,8 @@ import org.openqa.selenium.WebDriver;
 
 /**
  * The banner shared by every signed-in page: burger menu, cart link and cart badge.
- * Modelled as its own component so the cart-count logic is written once, not on
- * every page that shows the header.
+ * It is its own class so the cart-count logic is written once, instead of on every
+ * page that shows the header.
  */
 public class HeaderComponent extends BasePage {
 

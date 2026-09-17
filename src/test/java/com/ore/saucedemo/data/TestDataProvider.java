@@ -4,8 +4,8 @@ import com.ore.saucedemo.config.ConfigReader;
 import org.testng.annotations.DataProvider;
 
 /**
- * Data-driven inputs kept away from the test bodies, so adding a case is a one-line
- * change rather than a new copy-pasted test method.
+ * Test inputs kept out of the test bodies. Adding a case is one more line here,
+ * instead of another copy-pasted test method.
  */
 public final class TestDataProvider {
 

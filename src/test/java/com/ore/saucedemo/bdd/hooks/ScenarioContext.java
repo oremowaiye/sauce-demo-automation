@@ -10,9 +10,9 @@ import com.ore.saucedemo.pages.LoginPage;
 /**
  * State shared between step-definition classes within a single scenario.
  *
- * <p>Cucumber creates one instance per scenario and injects it into every step class that
- * asks for it (PicoContainer), which keeps the steps free of static state and safe to run
- * scenario by scenario.
+ * <p>Cucumber, through PicoContainer, creates one instance per scenario and passes it
+ * to any step class that asks for it in its constructor. No static state, so one
+ * scenario cannot leak into the next.
  */
 public class ScenarioContext {
 

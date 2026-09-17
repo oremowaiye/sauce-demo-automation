@@ -25,7 +25,7 @@ public class CheckoutInformationPage extends BasePage {
         return FORM;
     }
 
-    /** Fills and submits in one go - the happy path most tests need. */
+    /** Fills and submits in one go, for the happy path most tests want. */
     @Step("Complete the checkout form and continue")
     public CheckoutOverviewPage submit(CheckoutInfo info) {
         fill(info);
@@ -34,8 +34,8 @@ public class CheckoutInformationPage extends BasePage {
     }
 
     /**
-     * Submits whatever is in the form without assuming it is accepted, so validation
-     * tests can stay on this page and read the error banner.
+     * Submits the form without assuming it is accepted, so validation tests stay on
+     * this page and read the error banner.
      */
     @Step("Submit the checkout form with first='{firstName}' last='{lastName}' postcode='{postalCode}'")
     public CheckoutInformationPage submitExpectingError(String firstName, String lastName, String postalCode) {

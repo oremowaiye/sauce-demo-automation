@@ -114,6 +114,13 @@
             <version>${jackson.version}</version>
         </dependency>
 
+        <!-- Pinned explicitly: transitive dependencies drag in slf4j-api 1.x, which
+             prints a "Failed to load class StaticLoggerBinder" warning on every run. -->
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>${slf4j.version}</version>
+        </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-simple</artifactId>

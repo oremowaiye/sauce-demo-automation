@@ -1,9 +1,9 @@
 package com.ore.saucedemo.exceptions;
 
 /**
- * Unchecked exception for framework-level failures (bad configuration, unsupported
- * browser, driver start-up problems) so they are never confused with test assertion
- * failures in the report.
+ * Unchecked exception for framework problems: bad configuration, an unsupported
+ * browser, a driver that will not start. Keeping them in their own type stops the
+ * report confusing them with a failed assertion.
  */
 public class FrameworkException extends RuntimeException {
 

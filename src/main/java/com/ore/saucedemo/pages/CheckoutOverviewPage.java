@@ -8,7 +8,7 @@ import org.openqa.selenium.WebDriver;
 import java.math.BigDecimal;
 import java.util.List;
 
-/** Checkout step two: the order summary, where the money is checked. */
+/** Checkout step two: the order summary, where the arithmetic gets checked. */
 public class CheckoutOverviewPage extends BasePage {
 
     private static final By SUMMARY_INFO = By.className("summary_info");

@@ -6,7 +6,7 @@ import io.qameta.allure.Step;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
-/** The SauceDemo sign-in screen: the entry point for every UI test. */
+/** The sign-in screen. Every UI test starts here. */
 public class LoginPage extends BasePage {
 
     private static final By USERNAME_FIELD = By.id("user-name");
@@ -38,10 +38,6 @@ public class LoginPage extends BasePage {
         return new InventoryPage(driver);
     }
 
-    /**
-     * Fills the form and submits it without assuming the login succeeds, so negative
-     * tests can stay on this page and assert on the error banner.
-     */
     @Step("Submit credentials: '{username}' / '{password}'")
     public LoginPage submitCredentials(String username, String password) {
         if (!username.isEmpty()) {

@@ -14,9 +14,9 @@ import java.util.List;
 /**
  * Shared behaviour for every page object.
  *
- * <p>All interaction goes through the explicit-wait helpers here rather than raw
- * {@code driver.findElement} calls, which is what keeps the suite free of
- * {@code Thread.sleep} and of the flakiness that comes with it.
+ * <p>Page objects interact through the explicit-wait helpers below instead of calling
+ * {@code driver.findElement} directly. That is how the suite stays free of
+ * {@code Thread.sleep} and the flakiness that comes with it.
  */
 public abstract class BasePage {
 
@@ -79,9 +79,8 @@ public abstract class BasePage {
     }
 
     /**
-     * Presence check that does not wait the full timeout - used for assertions about
-     * things that should be absent, where waiting 10 seconds for every check would make
-     * the suite crawl.
+     * Presence check with no wait. Used when asserting something is absent, where
+     * waiting the full 10 seconds on every check would make the suite crawl.
      */
     protected boolean isPresent(By locator) {
         return !driver.findElements(locator).isEmpty();

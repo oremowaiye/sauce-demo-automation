@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 
-<!-- The subset worth running on every commit: can a customer sign in, find a
-     product, and buy it? Runs in roughly a quarter of the time of the full suite. -->
+<!-- can a customer sign in, find a product, and buy it? Runs in roughly a
+     quarter of the time of the full suite. -->
 <suite name="SauceDemo smoke" parallel="classes" thread-count="3" verbose="1">
 
     <listeners>

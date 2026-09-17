@@ -15,9 +15,9 @@ import org.testng.annotations.Parameters;
 /**
  * Lifecycle shared by every UI test: one fresh browser per test method, always closed.
  *
- * <p>A browser per method costs a little time but buys complete isolation - no test can
- * be made to pass or fail by the state another one left behind, which is what makes the
- * suite safe to run in parallel and trustworthy in CI.
+ * <p>A browser per method costs a few seconds and gives every test a clean start. No
+ * test can pass or fail because of what another one left behind. That is what makes
+ * running them in parallel safe.
  */
 public abstract class BaseTest {
 

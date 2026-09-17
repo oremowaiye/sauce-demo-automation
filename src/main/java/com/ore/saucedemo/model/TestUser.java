@@ -3,8 +3,8 @@ package com.ore.saucedemo.model;
 import com.ore.saucedemo.config.ConfigReader;
 
 /**
- * The SauceDemo demo accounts. Usernames come from configuration so the suite never
- * hard-codes credentials in test classes.
+ * The SauceDemo demo accounts. Usernames come from configuration, so no test class
+ * has credentials written into it.
  */
 public enum TestUser {
 

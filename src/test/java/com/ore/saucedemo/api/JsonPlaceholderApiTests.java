@@ -31,10 +31,10 @@ import static org.testng.Assert.assertTrue;
 /**
  * API-layer checks written with RestAssured against a public sandbox API.
  *
- * <p>SauceDemo has no public API of its own, so these run against JSONPlaceholder. The
- * point is the shape of the tests - shared request specification, status and schema
- * assertions, negative cases and a response-time budget - which is the same shape used
- * against a real service.
+ * <p>SauceDemo has no public API of its own, so these run against JSONPlaceholder.
+ * What matters is the shape: a shared request spec, status and body assertions,
+ * negative cases, a response-time budget. That shape is the same against a real
+ * service.
  */
 @Epic("API")
 @Feature("JSONPlaceholder REST endpoints")

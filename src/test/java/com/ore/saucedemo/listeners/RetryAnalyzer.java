@@ -7,9 +7,9 @@ import org.testng.ITestResult;
 /**
  * Retries a failed test a small, configurable number of times.
  *
- * <p>Retries are a pragmatic guard against genuinely infrastructural flakiness (a dropped
- * connection to the grid, a cold start). They are deliberately capped at one by default:
- * a test that only passes on the second attempt is a bug report, not a green build.
+ * <p>Retries cover infrastructure problems: a dropped connection to the grid, a cold
+ * start. The cap is one by default, on purpose. A test that only passes on the second
+ * go is a bug report, not a green build.
  */
 public class RetryAnalyzer implements IRetryAnalyzer {
 

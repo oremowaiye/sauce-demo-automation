@@ -7,11 +7,11 @@ import java.io.InputStream;
 import java.util.Properties;
 
 /**
- * Single source of truth for configuration.
+ * Reads the framework's configuration.
  *
- * <p>Values are loaded once from {@code config.properties} on the classpath. Any value
- * can be overridden at runtime with a system property, which is what lets the same suite
- * run locally against a visible browser and in CI headless:
+ * <p>Values load once from {@code config.properties} on the classpath. A system property
+ * of the same name overrides any of them, so one suite can run headless in CI and in a
+ * visible browser locally:
  *
  * <pre>mvn test -Dbrowser=firefox -Dheadless=false</pre>
  */
@@ -36,7 +36,7 @@ public final class ConfigReader {
         }
     }
 
-    /** System property wins over the file, so CI and local runs share one config. */
+    /** A system property beats the file, so CI and local runs can share one config. */
     public static String get(String key) {
         String override = System.getProperty(key);
         if (override != null && !override.isBlank()) {

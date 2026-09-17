@@ -10,7 +10,7 @@ import org.openqa.selenium.WebElement;
 import java.math.BigDecimal;
 import java.util.List;
 
-/** The basket: what has been added, and the way through to checkout. */
+/** The basket, and the route from it into checkout. */
 public class CartPage extends BasePage {
 
     private static final By CART_LIST = By.className("cart_list");

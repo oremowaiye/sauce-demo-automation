@@ -6,9 +6,10 @@ import io.cucumber.testng.CucumberOptions;
 /**
  * Entry point for the Gherkin layer.
  *
- * <p>The BDD scenarios are not a second test suite - they call the same page objects as
- * the TestNG tests. Gherkin earns its place where a scenario is worth reading by someone
- * who does not read Java: the business rules around signing in and buying something.
+ * <p>These scenarios are not a second test suite. They call the same page objects the
+ * TestNG tests do. Gherkin is worth the extra layer only where someone who does not
+ * read Java needs to read the scenario, which here means the rules around signing in
+ * and buying something.
  */
 @CucumberOptions(
         features = "src/test/resources/features",

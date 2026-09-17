@@ -13,6 +13,8 @@ import org.openqa.selenium.firefox.FirefoxOptions;
 import java.time.Duration;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  * Creates and hands out WebDriver instances.
@@ -24,6 +26,13 @@ import java.util.Map;
 public final class DriverFactory {
 
     private static final ThreadLocal<WebDriver> DRIVER = new ThreadLocal<>();
+
+    static {
+        // Selenium logs a CDP-version warning for every driver it starts whenever the
+        // installed Chrome is newer than the DevTools mappings the client ships with.
+        // Nothing here uses CDP, so the warning is pure noise that buries real failures.
+        Logger.getLogger("org.openqa.selenium").setLevel(Level.SEVERE);
+    }
 
     private DriverFactory() {
     }
