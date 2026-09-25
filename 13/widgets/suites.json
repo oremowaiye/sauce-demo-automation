@@ -1,0 +1,1 @@
+{"total":2,"items":[{"uid":"e36fa60d51342a7988a3035bd7b32087","name":"SauceDemo regression","statistic":{"failed":0,"broken":0,"skipped":0,"passed":38,"unknown":0,"total":38}},{"uid":"dcfd6e25e83c62f4f3b602876b2314d8","name":"SauceDemo API","statistic":{"failed":0,"broken":0,"skipped":0,"passed":7,"unknown":0,"total":7}}]}
